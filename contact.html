@@ -1,8 +1,74 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Send an inquiry about adoption, fostering, or volunteering."><title>Twin Cities Animal Rescue | Contact</title><link rel="stylesheet" href="styles.css"></head>
-<body><a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><a class="site-brand" href="index.html">Twin Cities <span>Animal Rescue</span></a><nav class="site-nav" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Ways to Help</a></li><li><a href="about.html">About</a></li><li><a aria-current="page" href="contact.html">Contact</a></li></ul></nav></header>
-<main class="site-main" id="main-content"><header class="page-heading"><p class="eyebrow">Get in touch</p><h1>What would you like to know?</h1><p>Use this sample form to prepare an inquiry about volunteering, fostering, adoption, or another way to support the rescue.</p></header>
-<div class="contact-layout"><form class="contact-form" action="#" method="post"><fieldset><legend>Your contact information</legend><div class="form-grid"><p><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></p><p><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></p></div><p><label for="phone">Phone number <span>(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9()+. -]{7,20}" title="Enter 7 to 20 digits, spaces, or phone punctuation."></p></fieldset><fieldset><legend>Your interest</legend><p><label for="interest">What would you like to ask about?</label><select id="interest" name="interest" required><option value="">Choose an interest</option><option value="volunteer">Volunteering</option><option value="foster">Fostering</option><option value="adoption">Adoption information</option><option value="other">Other</option></select></p><p><label for="availability">When are you available?</label><input id="availability" name="availability" type="text" placeholder="For example, weekday evenings" required></p><p><label for="experience">Experience with pets</label><select id="experience" name="experience" required><option value="">Choose one</option><option value="new">I am new to pet care</option><option value="some">I have some pet-care experience</option><option value="experienced">I have extensive pet-care experience</option></select></p><p><label for="message">Short message</label><textarea id="message" name="message" rows="5" required></textarea></p></fieldset><p class="form-note">This demonstration form is not connected to a submission service. Do not enter personal information.</p><button type="submit">Send sample inquiry <span aria-hidden="true">→</span></button></form><aside class="contact-aside"><p class="eyebrow">Before you reach out</p><h2>Confirm current details</h2><p>Availability, requirements, service areas, and office hours were not included in the project materials. Contact the organization directly for current information.</p><a class="text-link" href="services.html">Review ways to help <span aria-hidden="true">→</span></a></aside></div>
-</main><footer class="site-footer"><div><a class="site-brand" href="index.html">Twin Cities <span>Animal Rescue</span></a><p>Explore adoption, fostering, and volunteer opportunities.</p></div><a href="index.html">Return home <span aria-hidden="true">→</span></a><p class="footer-note">A student website project based on the selected client scenario.</p></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Send an inquiry about adoption, fostering, or volunteering.">
+  <title>Twin Cities Animal Rescue | Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="touchstone4.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="site-brand" href="index.html">Twin Cities <span>Animal Rescue</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Ways to Help</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a aria-current="page" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="site-main" id="main-content">
+    <header class="page-heading">
+      <p class="eyebrow">Get in touch</p>
+      <h1>What would you like to know?</h1>
+      <p>Use this sample form to prepare an inquiry about volunteering, fostering, adoption, or another way to support the rescue.</p>
+    </header>
+    <div class="contact-layout">
+      <form class="contact-form" id="contact-form" novalidate>
+        <section class="inquiry-guide" aria-labelledby="inquiry-guide-heading">
+          <h2 id="inquiry-guide-heading">Choose how you would like to help</h2>
+          <p id="interest-guidance" aria-live="polite">Choose an interest below to see what information may help the rescue respond.</p>
+        </section>
+        <fieldset>
+          <legend>Your contact information</legend>
+          <div class="form-grid">
+            <p><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required><small class="field-error" id="name-error"></small></p>
+            <p><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required><small class="field-error" id="email-error"></small></p>
+          </div>
+          <p><label for="phone">Phone number <span>(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9()+. -]{7,20}" title="Enter 7 to 20 digits, spaces, or phone punctuation." aria-describedby="phone-error"><small class="field-error" id="phone-error"></small></p>
+        </fieldset>
+        <fieldset>
+          <legend>Your interest</legend>
+          <p><label for="interest">What would you like to ask about?</label><select id="interest" name="interest" aria-describedby="interest-error" required><option value="">Choose an interest</option><option value="volunteer">Volunteering</option><option value="foster">Fostering</option><option value="adoption">Adoption information</option><option value="other">Other</option></select><small class="field-error" id="interest-error"></small></p>
+          <p><label for="availability">When are you available?</label><input id="availability" name="availability" type="text" placeholder="For example, weekday evenings" aria-describedby="availability-error" required><small class="field-error" id="availability-error"></small></p>
+          <p><label for="experience">Experience with pets</label><select id="experience" name="experience" aria-describedby="experience-error" required><option value="">Choose one</option><option value="new">I am new to pet care</option><option value="some">I have some pet-care experience</option><option value="experienced">I have extensive pet-care experience</option></select><small class="field-error" id="experience-error"></small></p>
+          <p><label for="message">Short message</label><textarea id="message" name="message" rows="5" aria-describedby="message-error" required></textarea><small class="field-error" id="message-error"></small></p>
+        </fieldset>
+        <p class="form-note">This is a demonstration form. It saves a draft in this browser tab but does not send your inquiry to the rescue.</p>
+        <button type="submit">Review my inquiry <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <section class="inquiry-summary" id="inquiry-summary" aria-live="polite" hidden>
+          <h2>Inquiry preview</h2>
+          <p id="summary-text"></p>
+        </section>
+      </form>
+      <aside class="contact-aside">
+        <p class="eyebrow">Before you reach out</p>
+        <h2>Confirm current details</h2>
+        <p>Availability, requirements, service areas, and office hours were not included in the project materials. Contact the organization directly for current information.</p>
+        <a class="text-link" href="services.html">Review ways to help <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div><a class="site-brand" href="index.html">Twin Cities <span>Animal Rescue</span></a><p>Explore adoption, fostering, and volunteer opportunities.</p></div>
+    <a href="index.html">Return home <span aria-hidden="true">→</span></a>
+    <p class="footer-note">A student website project based on the selected client scenario.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* Additive styles for Touchstone 4; styles.css remains unchanged. */
+.inquiry-guide,
+.inquiry-summary {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #cbbda9;
+  border-radius: 0.8rem;
+  background: #f7f3ec;
+}
+.inquiry-guide h2,
+.inquiry-summary h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+.inquiry-guide p,
+.inquiry-summary p { margin: 0; }
+.contact-form .field-error { display: block; min-height: 1.35em; margin-top: 0.15rem; color: #8b2e22; font-size: 0.92rem; font-weight: 700; }
+.contact-form [aria-invalid="true"] { border: 2px solid #8b2e22; }
+.contact-form .form-status { min-height: 1.5em; margin: 0.7rem 0; font-weight: 700; }
+.contact-form .inquiry-summary[hidden] { display: none; }
